@@ -1,0 +1,70 @@
+/* <div class="leaderboard-item"> */
+/*     <div class="avatar">BF</div> */
+/*     <p class="description">Author & Developer</p> */
+/*     <p class="specialism">Scones, Carrot Cake</p> */
+/*     <div class="chart-position">6</div> */
+/* </div> */
+body {
+    margin: 0;
+    background-color: #222;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        Helvetica Neue,
+        Segoe UI,
+        Tahoma,
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        Fira Sans,
+        Open Sans,
+        sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.leaderboard-item {
+    display: grid;
+    grid-template: "avatar desc position" auto "avatar specialism position" auto / 40px 1fr 40px;
+    gap: 0 5px;
+    align-items: center;
+    background-color: #e8ffe9;
+    padding: 5px;
+}
+
+.avatar {
+    display: grid;
+    aspect-ratio: 1/1;
+    grid-area: avatar;
+    background-color: #3d3d3d;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-size: 24px;
+    place-items: center;
+    color: #fff;
+}
+
+.description {
+    grid-area: desc;
+    align-self: end;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+
+.specialism {
+    grid-area: specialism;
+    align-self: start;
+    color: #575757;
+    font-size: 14px;
+}
+
+.chart-position {
+    grid-area: position;
+    color: #060606;
+    font-weight: 700;
+    font-size: 20px;
+}

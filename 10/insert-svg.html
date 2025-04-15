@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Ways to insert SVG into a page</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="insert-svg.css" rel="stylesheet" />
+        <style>
+            .item {
+                background-image: url("../10/example_10-01/Star.svg");
+                width: 198px;
+                height: 188px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>As a background image</h2>
+        <div class="item"></div>
+        <h2>As an img tag</h2>
+        <img
+            src="../10/example_10-01/Star.svg"
+            alt="a line drawing of a star"
+        />
+        <h2>As an object tag</h2>
+
+        <object data="../10/example_10-01/Star.svg" type="image/svg+xml">
+            <span class="fallback-info">Your browser doesn't support SVG</span>
+        </object>
+        <h2>Inline</h2>
+        <div>
+            <svg
+                id="svgInline"
+                width="198"
+                height="188"
+                viewBox="0 0 198 188"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+                <title>Star 1</title>
+                <g class="star_Wrapper" fill="none" fill-rule="evenodd">
+                    <path
+                        id="star_Path"
+                        stroke="#979797"
+                        stroke-width="3"
+                        fill="#F8E81C"
+                        d="M99 154l-58.78 30.902 11.227-65.45L3.894 73.097l65.717-9.55L99 4l29.39 59.55 65.716 9.548-47.553 46.353 11.226 65.452z"
+                    />
+                </g>
+            </svg>
+        </div>
+    </body>
+</html>

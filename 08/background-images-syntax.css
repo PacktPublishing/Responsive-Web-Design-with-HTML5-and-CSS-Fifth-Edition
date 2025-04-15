@@ -1,0 +1,38 @@
+[class^="bg"] {
+    height: 600px;
+    width: 800px;
+    background-repeat: no-repeat;
+    margin: 10px;
+    outline: 2px dashed #f90;
+}
+
+.bg {
+    background: url("img/1.jpeg"), url("img/2.jpeg"), url("img/3.jpeg");
+}
+
+.bg-with-position-and-color {
+    background:
+        url("img/1.jpeg"),
+        url("img/2.jpeg"),
+        url("img/3.jpeg") left bottom,
+        black;
+}
+
+.bg-with-color {
+    background-image: url("img/1.jpeg"), url("img/2.jpeg"), url("img/3.jpeg");
+    background-color: black;
+    background-position:
+        0% 0%,
+        0% 0%,
+        left bottom;
+    background-size: cover, contain;
+}
+
+.bg-which-image {
+    background-image: url("bg.jpg");
+}
+@media (min-resolution: 1.5dppx) {
+    .bg-which-image {
+        background-image: url("bg@1_5x.jpg");
+    }
+}

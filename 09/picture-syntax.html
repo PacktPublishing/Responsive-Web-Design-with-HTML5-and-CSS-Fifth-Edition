@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Picture element examples</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <picture>
+            <source srcset="scone.avif" type="image/avif" />
+            <source srcset="scone.webp" type="image/webp" />
+            <img
+                src="scone.jpg"
+                alt="A delicious scone, baked to perfection"
+                loading="lazy"
+            />
+        </picture>
+
+        <img
+            src="scones_small.jpg"
+            srcset="scones_medium.jpg 1.5x, scones_large.jpg 2x"
+            alt="a delicious looking baked scone"
+        />
+        <!-- advanced switching with srcset -->
+        <img
+            srcset="scones-small.jpg 450w, scones-medium.jpg 900w"
+            sizes="(min-width: 280px) 100vw, (min-width: 640px) 50vw"
+            src="scones-small.jpg"
+            alt="Lots of delicious scones"
+        />
+
+        <!-- Using picture as art direction -->
+        <picture>
+            <source media="(min-width: 480px)" srcset="cake-table.jpg" />
+            <source media="(min-width: 960px)" srcset="cake-shop.jpg" />
+            <img src="scones.jpg" alt="Lots of cakes" />
+        </picture>
+    </body>
+</html>

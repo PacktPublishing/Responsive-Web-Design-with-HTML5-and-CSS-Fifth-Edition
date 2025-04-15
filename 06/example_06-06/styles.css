@@ -1,0 +1,9 @@
+.hi {
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+}
+
+:where(#thing) {
+    background-color: red;
+}

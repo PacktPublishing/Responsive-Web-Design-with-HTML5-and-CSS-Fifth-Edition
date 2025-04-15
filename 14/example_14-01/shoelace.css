@@ -1,0 +1,26 @@
+@layer framework;
+@layer layout {
+    @layer header,
+            sidebars,
+            content,
+            modals;
+}
+@layer components;
+@import url("shoelace.css") layer(framework);
+
+.btn {
+    border: 1px dotted goldenrod;
+}
+
+/* CSS framework code */
+@layer framework {
+    button.btn {
+        font-size: 1.3em;
+        border: 2px solid #333;
+    }
+}
+
+/* Author stylesheet */
+body {
+    font-size: 1.1em !important;
+}

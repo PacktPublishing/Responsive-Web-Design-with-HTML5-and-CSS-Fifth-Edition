@@ -1,0 +1,9 @@
+.grid-shorthand {
+    display: grid;
+    /* grid: 100px 100px / 200px 200px 200px; */
+    /* grid: 100px 100px / repeat(auto-fill, 75px); */
+    /* grid: 100px / auto-flow; */
+    /* grid: auto-flow 100px / repeat(5, 1fr); */
+    grid: auto-flow 100px / auto;
+    background-color: #fefefe;
+}

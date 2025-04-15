@@ -1,0 +1,61 @@
+.tri-right {
+    width: 0;
+    height: 0;
+    border-top: 3.125rem solid transparent;
+    border-left: 6.25rem solid red;
+    border-bottom: 3.125rem solid transparent;
+    margin-bottom: 5rem;
+    /* box-shadow: 8px 8px 6px #333; */
+    filter: drop-shadow(8px 8px 6px #333);
+}
+
+[class^="filter"] {
+    background-image: url("el-cap@1x.jpg");
+    background-size: cover;
+    width: 750px;
+    height: 500px;
+    margin-bottom: 5rem;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+    [class^="filter"] {
+        background-image: url("el-cap@2x.jpg");
+    }
+}
+
+.filter-blur {
+    filter: blur(2px);
+}
+
+.filter-brightness {
+    filter: brightness(2);
+}
+
+.filter-contrast {
+    filter: contrast(2);
+}
+
+.filter-grayscale {
+    filter: grayscale(0.8);
+}
+
+.filter-hue-rotate {
+    filter: hue-rotate(25deg);
+}
+
+.filter-invert {
+    filter: invert(75%);
+}
+
+.filter-opacity {
+    filter: opacity(50%);
+}
+
+.filter-saturate {
+    filter: saturate(15%);
+}
+
+.filter-sepia {
+    filter: sepia(0.75);
+}
+

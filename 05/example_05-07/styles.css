@@ -1,0 +1,26 @@
+.my-first-grid {
+    display: grid;
+    /* grid-template-rows: 200px 200px; */
+    /* grid-template-columns: 300px 300px 300px; */
+    /* grid-template: 200px 200px / 300px 300px 300px; */
+    /* grid-template: */
+    /*     [rows-top] "a a a" 200px */
+    /*     "b b b" 200px [rows-bottom] */
+    /*     / 300px 300px 300px; */
+
+    /* <'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>? [ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'> */
+    /* grid: 100px 100px / 200px 200px 200px; */
+    /* grid: 100px 100px / repeat(auto-fill, 75px); */
+    /* grid: 100px / auto-flow; */
+    background-color: #e4e4e4;
+    grid: auto-flow 100px / auto;
+}
+
+[class^="grid-item"] {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    outline: 3px dashed #f90;
+    font-size: 30px;
+    color: #333;
+}

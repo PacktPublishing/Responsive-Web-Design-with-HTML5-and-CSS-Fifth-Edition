@@ -1,0 +1,41 @@
+.redness {
+    color: #fe0208;
+}
+
+.redness-rgb {
+    color: rgb(254, 2, 8);
+}
+
+.redness-hsl {
+    color: hsl(359, 89%, 40%);
+}
+
+/* .hsl-functional-notation { */
+/*     hsl(hue, saturation, lightness) */
+/* } */
+
+.guess-me-rgb {
+    background-color: rgb(255, 51, 204);
+}
+
+.guess-me-hsl {
+    background-color: hsl(315, 100%, 60%);
+}
+
+.background-4hex {
+    background-color: #0007;
+    background-color: #00000077;
+}
+
+.redness-alpha-hsl {
+    color: hsl(359deg 99% 50% / 0.5);
+}
+
+.redness-alpha-hsl-percentage {
+    color: hsl(359deg 99% 50% / 50%);
+}
+
+.redness-alpha-rgba {
+    color: rgb(254 2 8 / 0.8);
+    opacity: 0.5;
+}

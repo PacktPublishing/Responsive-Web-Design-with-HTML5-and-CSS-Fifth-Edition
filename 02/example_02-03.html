@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Details and summary example</title>
+        <meta name="description" content="A basic HTML5 video link" />
+        <meta name="viewport" content="width=device-width" />
+        <style>
+            /* With the following in Chromium browsers you can enjoy animated open and closing of the details */
+
+            :root {
+                interpolate-size: allow-keywords;
+            }
+            details {
+                overflow: hidden;
+            }
+            details::details-content {
+                block-size: 0;
+                transition:
+                    block-size 0.5s,
+                    content-visibility 0.5s;
+                transition-behavior: allow-discrete;
+            }
+            details[open]::details-content {
+                block-size: auto;
+            }
+
+            /* This rule hides the icon in Safari */
+
+            /* summary::-webkit-details-marker { */
+            /*     display: none; */
+            /* } */
+
+            /* The next 3 lines will hide the marker in Chromium browsers like Chrome and Edge */
+
+            /* summary::marker { */
+            /*     content: none; */
+            /* } */
+
+            /* This alternative open and close icon does not work in Safari as of Feb 2025 */
+
+            summary {
+                list-style-type: "⇣ ";
+            }
+            [open] summary {
+                list-style-type: "⇡ ";
+            }
+
+            /* Uncomment the section below to see the styled verson of the accordion panels */
+
+            /* .styled-details { */
+            /*     font-family: sans-serif; */
+            /*     padding: 10px; */
+            /*     summary { */
+            /*         font-weight: 600; */
+            /*         padding: 5px 10px; */
+            /*         background-color: #f0f0f0; */
+            /*     } */
+            /*     &::details-content { */
+            /*         box-sizing: border-box; */
+            /*         background-color: #f8f8f8; */
+            /*     } */
+            /*     p { */
+            /*         margin: 0; */
+            /*         padding: 5px; */
+            /*         border: 1px solid #e4e4e4; */
+            /*     } */
+            /* } */
+        </style>
+    </head>
+    <body>
+        <details>
+            <summary>I ate 15 scones in one day</summary>
+            <p>
+                Of course I didn't. It would probably kill me if I did. What a
+                way to go. Mmmmmm, scones!
+            </p>
+        </details>
+
+        <!-- Uncomment the section below to see the accordion styles panels -->
+
+        <!-- <details name="condiments" class="styled-details"> -->
+        <!--     <summary>Should the Jam go on first?</summary> -->
+        <!--     <p> -->
+        <!--         There are arguments against this, but it is my conviction that -->
+        <!--         scones taste best when the Jam sits -->
+        <!--         <i>below</i> -->
+        <!--         the Cream. -->
+        <!--     </p> -->
+        <!-- </details> -->
+        <!-- <details name="condiments" class="styled-details"> -->
+        <!--     <summary>Should the Cream go on first?</summary> -->
+        <!--     <p> -->
+        <!--         In short, no. Such a decision is tantamount to barbarism, making -->
+        <!--         you one step shy of an animal. I've tested this theory so you -->
+        <!--         don't have to. Jam first every time. -->
+        <!--     </p> -->
+        <!-- </details> -->
+    </body>
+</html>

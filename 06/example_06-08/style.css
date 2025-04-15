@@ -1,0 +1,31 @@
+@font-face {
+    font-family: InterVariable;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("fonts/InterVariable.woff2") format("woff2");
+}
+@font-face {
+    font-family: InterVariableItalic;
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("fonts/InterVariable-Italic.woff2") format("woff2");
+}
+
+html {
+    font-size: 1.5rem;
+    font-family: InterVariable, sans-serif;
+    font-variation-settings:
+        "wght" 300,
+        "slnt" -4;
+}
+
+i {
+    font-family: InterVariableItalic, sans-serif;
+    font-style: italic;
+}
+
+.tnum {
+    font-feature-settings: "tnum";
+}

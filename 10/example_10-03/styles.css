@@ -1,0 +1,33 @@
+body {
+    display: flex;
+}
+
+body > * {
+    display: inline-flex;
+    align-self: center;
+}
+
+* + * {
+    margin-left: 2rem;
+}
+
+.icon-drag-left-right {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #f90;
+    color: #ccc;
+}
+
+.different-context .icon-drag-left-right {
+    fill: #14805e;
+    color: #223344;
+    width: 4rem;
+    height: 4rem;
+}
+
+.alternate2.icon-drag-left-right {
+    fill: rgb(33 21 220 / 60%);
+    color: rgb(65 30 234 / 88%);
+    width: 3.5rem;
+    height: 3.5rem;
+}

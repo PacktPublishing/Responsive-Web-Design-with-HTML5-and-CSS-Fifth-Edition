@@ -1,0 +1,67 @@
+:root {
+    --MainFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --systemSerif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+        Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+        Segoe UI Emoji, Segoe UI Symbol;
+    --system-san-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+        segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+        arial, sans-serif;
+    --background-dark: #333;
+    --highlight-custard: #ffc926;
+}
+
+@media (color-gamut: p3) {
+    :root {
+        --highlight-custard: oklch(86% 0.202 87.88);
+    }
+}
+
+.Title {
+    font-family: var(--MainFont);
+    /* Browser 'sees' "Helvetica Neue", Helvetica, Arial, sans-serif; */
+}
+
+section {
+    --MainFont: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+        helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+        sans-serif;
+    --background-dark: #222;
+}
+.sub-title {
+    font-family: var(--MainFont);
+}
+
+/* :root { */
+/*     --fontSize: 1.2em; */
+/*     --lineHeight: 1.4; */
+/*     --col1: #333; */
+/*     --col2: #f9f9f9; */
+/*     --fontFam: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI, */
+/*         Tahoma, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Open Sans, */
+/*         sans-serif; */
+/*     --padInline: clamp(10px, 3vw, 25px); */
+/*     --padBlock: clamp(10px, 2vh, 20px); */
+/* } */
+/**/
+/* .component { */
+/*     font-size: var(--fontSize); */
+/*     font-family: var(--fontFam); */
+/*     line-height: var(--lineHeight); */
+/*     color: var(--col1); */
+/*     background-color: var(--col2, #000); */
+/*     --padInline: 15px; */
+/* } */
+
+.my-item-with-fallback {
+    background-color: var(--backgroundColor, #555);
+}
+
+/* Environment variables */
+heading {
+    padding-top: env(safe-area-inset-top);
+}
+
+/* Web Components need the :host selector */
+:host {
+    --my-custom-prop: 100%;
+}

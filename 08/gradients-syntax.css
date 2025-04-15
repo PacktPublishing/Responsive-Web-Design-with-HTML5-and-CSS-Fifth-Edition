@@ -1,0 +1,91 @@
+div + div {
+    margin-top: 20px;
+}
+
+.linear-gradient {
+    width: 800px;
+    height: 200px;
+    background: linear-gradient(red, blue);
+}
+
+.linear-gradient-makes-an-image {
+    background-image: linear-gradient(red, blue);
+}
+
+.linear-gradient-with-direction {
+    width: 800px;
+    height: 200px;
+    background: linear-gradient(to top right, red, blue);
+}
+
+.linear-gradient-direction-as-angle {
+    width: 800px;
+    height: 200px;
+    background: linear-gradient(45deg, red, blue);
+}
+
+.linear-gradient-starting-out-of-box {
+    width: 800px;
+    height: 200px;
+    background: linear-gradient(45deg, red -50%, blue);
+}
+
+.conic-gradient {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(at center, green, white, green);
+}
+
+.conic-gradient-equivalent-to {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(
+        at center,
+        green 0deg,
+        white 180deg,
+        green 360deg
+    );
+}
+
+.conic-gradient-with-percentage {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(at center, green 50%, white, green);
+}
+
+.conic-gradient-hard-stops {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(
+        at center,
+        red 0 25%,
+        orange 0% 180deg,
+        green 0% 75%,
+        blue 0%
+    );
+}
+
+.repeating-radial-gradient {
+    width: 800px;
+    height: 200px;
+    background: repeating-radial-gradient(black 0, orange 5px, red 10px);
+}
+
+.bar-chart-bar {
+    height: 200px;
+    width: 800px;
+    background-image: linear-gradient(to right, goldenrod 25%, hotpink 0%);
+}
+
+.carbon-fibre-background {
+    margin: 1rem;
+    width: 800px;
+    height: 400px;
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgb(255 255 255 / 0.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgb(255 255 255 / 0.1) 15%, transparent 20%) 8px 9px;
+    background-color: #282828;
+    background-size: 16px 16px;
+}

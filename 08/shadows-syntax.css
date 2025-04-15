@@ -1,0 +1,48 @@
+:root {
+    font-size: 2em;
+    background-color: #222;
+    color: #efefef;
+}
+
+.element {
+    /* Think of the first two values like you would padding or margin  */
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+.shadow-above-and-left {
+    text-shadow: -4px -4px 0px #dad7d7;
+}
+
+.any-color-or-length-style {
+    text-shadow: -0.5em 0.9rem 0px lch(70% 50 150 / 0.5);
+}
+
+/* Undo text-shadows with media queries */
+.text {
+    text-shadow: 2px 2px 0 #f90;
+}
+
+@media (min-width: 50rem) {
+    .text {
+        text-shadow: none;
+    }
+}
+
+.omit-the-blur {
+    text-shadow: -4px -4px #dad7d7;
+}
+
+.multiple {
+    /* prettier-ignore */
+    text-shadow: 0px 5px #ffdf1b, 4px 4px 0px violet;
+}
+
+.multiple-extra-whitespace {
+    text-shadow:
+        3px 3px #bbb,
+        -3px -3px #999;
+}
+
+.setting-a-box-shadow {
+    box-shadow: 0 3px 5px #444;
+}

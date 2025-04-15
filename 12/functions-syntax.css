@@ -1,0 +1,70 @@
+/* .headline { */
+/*     font-size: 16px; */
+/* } */
+/**/
+
+/* @media (min-width: 400px) { */
+/*     .headline { */
+/*         font-size: 6vw; */
+/*     } */
+/* } */
+/**/
+
+/* @media (min-width: 1000px) { */
+/*     .headline { */
+/*         font-size: 30px; */
+/*     } */
+/* } */
+
+.headline {
+    font-size: clamp(16px, 6vw, 30px);
+}
+
+.good {
+    width: calc(100vw - 30px);
+}
+
+.bad {
+    width: calc(100vw -30px);
+}
+
+/* .thing { */
+/*     height: calc(100vh - 50px); */
+/* } */
+
+.thing {
+    height: calc(
+        100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 50px
+    );
+}
+
+/* min() function */
+.min-function {
+    width: min(100vw, 700px);
+}
+
+.min-function-with-calc {
+    width: min(100vw, 700px - 5%);
+}
+
+.min-function-with-multiple {
+    width: min(50vw, 400px, 100% - 10px);
+}
+
+/* max() function */
+.label {
+    font-size: max(4vw, 18px);
+}
+
+/* clamp() function */
+.clamp-goldilocks {
+    font-size: clamp(32px, 40vw, 80px);
+}
+
+.clamp-with-calculations {
+    font-size: clamp(var(--textMin), 40vw, var(--textMax));
+}
+
+.clamp-with-custom-properties {
+    font-size: clamp(var(--textMin), 40vw + 5rem, var(--textMax));
+}

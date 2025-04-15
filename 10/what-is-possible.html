@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            Table of what capabilities are possible with each SVG insertion
+            method
+        </title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 13px 20px;
+                word-break: normal;
+            }
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 13px 20px;
+                word-break: normal;
+            }
+            .tg .tg-78na {
+                background-color: #fe0000;
+                color: #ffffff;
+                text-align: center;
+                vertical-align: top;
+            }
+            .tg .tg-yj5y {
+                background-color: #efefef;
+                text-align: center;
+                vertical-align: top;
+            }
+            .tg .tg-dpc8 {
+                background-color: #036400;
+                color: #ffffff;
+                text-align: center;
+                vertical-align: top;
+            }
+            .tg .tg-kftd {
+                background-color: #efefef;
+                text-align: left;
+                vertical-align: top;
+            }
+            .tg .tg-se7b {
+                background-color: #f8a102;
+                text-align: center;
+                vertical-align: top;
+            }
+            .tg .tg-y698 {
+                background-color: #efefef;
+                text-align: left;
+                vertical-align: top;
+            }
+            .tg .tg-qcu7 {
+                background-color: #036400;
+                color: #ffffff;
+                text-align: center;
+                vertical-align: top;
+            }
+            .tg .tg-0fb1 {
+                background-color: #fe0000;
+                color: #ffffff;
+                text-align: center;
+                vertical-align: top;
+            }
+            .tg .tg-c5of {
+                background-color: #036400;
+                color: #ffffff;
+                text-align: center;
+                vertical-align: top;
+            }
+            .tg .tg-apku {
+                background-color: #f8a102;
+                text-align: center;
+                vertical-align: top;
+            }
+        </style>
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tg-y698">Feature</th>
+                    <th class="tg-yj5y">img</th>
+                    <th class="tg-yj5y">object</th>
+                    <th class="tg-yj5y">inline</th>
+                    <th class="tg-yj5y">bg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-y698">SMIL</td>
+                    <td class="tg-qcu7">Y</td>
+                    <td class="tg-dpc8">Y</td>
+                    <td class="tg-dpc8">Y</td>
+                    <td class="tg-dpc8">Y</td>
+                </tr>
+                <tr>
+                    <td class="tg-y698">External CSS</td>
+                    <td class="tg-78na">N</td>
+                    <td class="tg-se7b">*1</td>
+                    <td class="tg-dpc8">Y</td>
+                    <td class="tg-78na">N</td>
+                </tr>
+                <tr>
+                    <td class="tg-y698">Internal CSS</td>
+                    <td class="tg-dpc8">Y</td>
+                    <td class="tg-dpc8">Y</td>
+                    <td class="tg-dpc8">Y</td>
+                    <td class="tg-dpc8">Y</td>
+                </tr>
+                <tr>
+                    <td class="tg-kftd">Access via JS</td>
+                    <td class="tg-0fb1">N</td>
+                    <td class="tg-c5of">Y</td>
+                    <td class="tg-c5of">Y</td>
+                    <td class="tg-0fb1">N</td>
+                </tr>
+                <tr>
+                    <td class="tg-kftd">Cacheable</td>
+                    <td class="tg-c5of">Y</td>
+                    <td class="tg-c5of">Y</td>
+                    <td class="tg-apku">*2</td>
+                    <td class="tg-c5of">Y</td>
+                </tr>
+                <tr>
+                    <td class="tg-kftd">MQ in SVG</td>
+                    <td class="tg-c5of">Y</td>
+                    <td class="tg-c5of">Y</td>
+                    <td class="tg-apku">*3</td>
+                    <td class="tg-c5of">Y</td>
+                </tr>
+                <tr>
+                    <td class="tg-kftd">&lt;use&gt; possible</td>
+                    <td class="tg-0fb1">N</td>
+                    <td class="tg-c5of">Y</td>
+                    <td class="tg-c5of">Y</td>
+                    <td class="tg-0fb1">N</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Notes:</h2>
+        <ol>
+            <li>
+                When using an SVG inside an object, you can use an external
+                style sheet to style the SVG, but you have to link to that style
+                sheet from within the SVG
+            </li>
+            <li>
+                You can use SVGs as an external asset (which is cacheable),
+                although those external assets cannot be manipulated by
+                JavaScript
+            </li>
+            <li>
+                A media query inside the styles section of an "inlined" SVG
+                works on the size of the document it lives in (not the size of
+                the SVG itself)
+            </li>
+        </ol>
+    </body>
+</html>

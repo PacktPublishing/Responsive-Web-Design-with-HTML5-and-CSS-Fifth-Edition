@@ -1,0 +1,13 @@
+.mask-bg {
+    /* background-image: url("Star.svg"); */
+    /* background-repeat: no-repeat; */
+    mask-image: url("Star.svg");
+    mask-repeat: no-repeat;
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    transition: background-color 1s;
+    &:hover {
+        background-color: hotpink;
+    }
+}

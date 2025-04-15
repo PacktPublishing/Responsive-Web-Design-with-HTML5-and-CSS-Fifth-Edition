@@ -1,0 +1,40 @@
+.thing::before {
+    content: "Spooky";
+}
+
+img:not([alt]),
+img[alt=""] {
+    border: 3px dashed red;
+}
+
+[alt="a random image"] {
+    border: 2px dotted purple;
+}
+
+[data-type^="todo"] {
+    background-color: purple;
+    color: white;
+}
+
+[data-ingredients*="jam"] {
+    background-color: hotpink;
+}
+
+[data-activity-name="swimming"][data-location="indoor"] {
+    background-color: green;
+}
+
+[id="10"] {
+    font-size: 2em;
+}
+
+.nav-Wrapper {
+    display: flex;
+    flex: 1 1 auto;
+    background-color: #efefef;
+    padding: 0.5em 1em;
+}
+
+span:only-of-type {
+    background-color: hotpink;
+}
