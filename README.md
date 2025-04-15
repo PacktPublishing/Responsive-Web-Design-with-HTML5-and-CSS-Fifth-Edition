@@ -1,4 +1,4 @@
-# Responsive Web Design with HTML5 and CSS - 4th Edition
+# Responsive Web Design with HTML5 and CSS - 5th Edition
 
 Responsive Web Design with HTML5 and CSS, Fifth Edition, written by Ben Frain, published by Packt
 
