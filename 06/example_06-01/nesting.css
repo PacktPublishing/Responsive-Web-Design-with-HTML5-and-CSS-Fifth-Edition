@@ -1,0 +1,77 @@
+/* .parent { */
+/*     font-size: 16px; */
+/* } */
+/**/
+/* .parent .child { */
+/*     font-size: 1em; */
+/* } */
+/**/
+/* .ancestor .parent { */
+/*     font-size: 1.5rem; */
+/* } */
+
+/* Nested version */
+.parent {
+    font-size: 16px;
+    .child {
+        font-size: 1em;
+    }
+    .ancestor & {
+        font-size: 1.5rem;
+    }
+}
+
+/* Normal version */
+/* .item { */
+/*     color: goldenrod; */
+/* } */
+/**/
+/* .item + .item { */
+/*     color: red; */
+/* } */
+/**/
+/* [data-scones].item { */
+/*     color: rebeccapurple; */
+/* } */
+
+/* Nested Version */
+.item {
+    color: goldenrod;
+    & + .item {
+        color: red;
+    }
+    &[data-scones] {
+        color: rebeccapurple;
+    }
+}
+
+.lists {
+    color: #333;
+    & .child-1,
+    .child-2 {
+        color: red;
+    }
+}
+
+/* Nested media query */
+.media-query {
+    width: 100%;
+    @media (min-width: 40em) {
+        width: 90%;
+        margin-inline: auto;
+    }
+}
+
+/* Lots of nested */
+.various {
+    color: #333;
+    @media (prefers-color-scheme: dark) {
+        color: #e8e8e8;
+    }
+    .container-big & {
+        width: 100%;
+    }
+    & + & {
+        margin-left: 10px;
+    }
+}

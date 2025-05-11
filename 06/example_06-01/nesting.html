@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Nesting examples</title>
+        <link href="nesting.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Nesting Examples</h1>
+        <section>
+            <h2>Child and ancestor</h2>
+            <div class="ancestor">
+                Ancestor
+                <div class="parent">
+                    Parent
+                    <div class="child">Child</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Adjacent sibling and data attributes</h2>
+            <div class="outer">
+                <div class="item">item</div>
+                <div class="item">item following another</div>
+                <div class="item" data-scones>item with data-attribute</div>
+            </div>
+        </section>
+        <section>
+            <h2>Selector lists</h2>
+            <div class="lists">
+                Text
+                <div class="child child-1">Child 1</div>
+                <div class="child child-2">Child 2</div>
+            </div>
+        </section>
+    </body>
+</html>

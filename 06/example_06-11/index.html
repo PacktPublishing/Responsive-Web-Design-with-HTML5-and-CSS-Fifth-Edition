@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>RWD 5e Scoped styles example</title>
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <section class="rwd-Chapters">
+            <h2>
+                <style>
+                    @scope {
+                        code {
+                            color: red;
+                        }
+                    }
+                </style>
+                Talking about the
+                <code>@scope</code>
+                at-rule
+            </h2>
+            <ol>
+                <li>
+                    <p>
+                        The
+                        <code>@scope</code>
+                        at rule can de-specify selection of elements.
+                    </p>
+                </li>
+            </ol>
+        </section>
+    </body>
+</html>
