@@ -12,18 +12,9 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <svg class="icon-drag-left-right">
-            <use xlink:href="defs.svg#icon-drag-left-right"></use>
-        </svg>
-
-        <div class="different-context">
-            <svg class="icon-drag-left-right">
-                <use xlink:href="defs.svg#icon-drag-left-right"></use>
-            </svg>
-        </div>
-
-        <svg class="icon-drag-left-right alternate2">
-            <use xlink:href="defs.svg#icon-drag-left-right"></use>
-        </svg>
+        <h3>Without animation-fill-mode</h3>
+        <div class="background-change"></div>
+        <h3>With animation-fill-mode forwards</h3>
+        <div class="background-change fill-mode-forwards"></div>
     </body>
 </html>

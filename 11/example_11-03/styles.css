@@ -1,44 +1,33 @@
-
 body {
-	padding: 0;
-	margin: 0;
+    display: flex;
 }
 
-nav {
-	padding: 30px;
+body > * {
+    display: inline-flex;
+    align-self: center;
 }
 
-a {
-	display: inline-flex;
-	background-color: #CC3232;
-	flex: 1 0 auto;
-	min-height: 88px;
-	text-decoration: none;
-	font-size: 22px;
-	border: 1px solid #333;
-	padding: 0 10px;
-	color: #ccc;
-	font-family: sans-serif;
-	align-items: center;
-	transition: transform 1s;
+* + * {
+    margin-left: 2rem;
 }
 
-.scale:hover {
-	transform: scale(1.4);
+.icon-drag-left-right {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #f90;
+    color: #ccc;
 }
 
-.translate:hover {
-	transform: translate(-20px, -20px);
+.different-context .icon-drag-left-right {
+    fill: #14805e;
+    color: #223344;
+    width: 4rem;
+    height: 4rem;
 }
 
-.rotate:hover {
-	transform: rotate(30deg);
-}
-
-.skew:hover {
-	transform: skew(40deg, 12deg);
-}
-
-.matrix:hover {
-	transform: matrix(1.178, -0.256, 1.122, 1.333, -41.533, -1.989);
+.alternate2.icon-drag-left-right {
+    fill: rgb(33 21 220 / 60%);
+    color: rgb(65 30 234 / 88%);
+    width: 3.5rem;
+    height: 3.5rem;
 }

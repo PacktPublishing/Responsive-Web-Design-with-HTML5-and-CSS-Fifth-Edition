@@ -1,55 +1,31 @@
-.flipper {
-    perspective: 400px;
-    position: relative;
-    width: 300px;
-    height: 44px;
-}
-
-.flipper + .flipper {
-    margin-top: 1em;
-}
-
-.flipper-object {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.panel {
+body {
     display: flex;
-    min-height: 44px;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
+}
+body > * {
+    display: inline-flex;
+    align-self: center;
 }
 
-.flipper-vertical .back {
-    transform: rotateX(180deg);
+* + * {
+    margin-left: 2rem;
 }
 
-.flipper-horizontal .back {
-    transform: rotateY(180deg);
+.icon-drag-left-right {
+    width: 2.5rem;
+    height: 2.5rem;
+    --fill: #f90;
 }
 
-.back {
-    background-color: #cc3232;
+.different-context .icon-drag-left-right {
+    --fill: #14805e;
+    color: #223344;
+    width: 4rem;
+    height: 4rem;
 }
 
-.front {
-    background-color: #739328;
+.alternate2.icon-drag-left-right {
+    --fill: rgba(33, 21, 220, 0.6);
+    color: rgba(65, 30, 234, 0.88);
+    width: 3.5rem;
+    height: 3.5rem;
 }
-
-.flipper:hover .flipper-vertical {
-    transform: rotateX(180deg);
-}
-
-.flipper:hover .flipper-horizontal {
-    transform: rotateY(180deg);
-}
-
