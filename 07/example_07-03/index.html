@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Font Size Adjust example from RWD.education</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="control-section" id="controls">
+            <label id="font-size-label">
+                Adjust the
+                <code>font-size-adjust</code>
+                <input
+                    type="range"
+                    id="range"
+                    name="font-size-adjust"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                />
+                <b id="output"></b>
+            </label>
+        </div>
+        <div class="paragraph-compare">
+            <p class="bree-serif-regular" contenteditable="true">
+                The quick brown fox jumps over the lazy dog. How vexingly quick
+                daft zebras jump. Blowzy night-frumps vex'd Jack Q. Amazingly
+                few discotheques provide jukeboxes. Two driven jocks help fax my
+                big quiz. Bright vixens jump; dozy fowl quack. Jackdaws love my
+                big sphinx of quartz. John quickly extemporized five tow bags.
+            </p>
+            <p class="fallback" contenteditable="true">
+                The quick brown fox jumps over the lazy dog. How vexingly quick
+                daft zebras jump. Blowzy night-frumps vex'd Jack Q. Amazingly
+                few discotheques provide jukeboxes. Two driven jocks help fax my
+                big quiz. Bright vixens jump; dozy fowl quack. Jackdaws love my
+                big sphinx of quartz. John quickly extemporized five tow bags.
+            </p>
+        </div>
+        <p class="glyph-compare">
+            <span class="bree-serif-regular outline">d</span>
+            <span class="fallback outline">d</span>
+        </p>
+        <script>
+            const range = document.getElementById("range");
+            const label = document.getElementById("font-size-label");
+            const output = document.getElementById("output");
+            output.textContent = range.value;
+            range.addEventListener("input", (event) => {
+                output.textContent = event.target.value;
+                document.body.style.setProperty("--adjust", event.target.value);
+            });
+        </script>
+    </body>
+</html>

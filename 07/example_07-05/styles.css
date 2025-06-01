@@ -1,0 +1,46 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+        Tahoma, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Open Sans,
+        sans-serif;
+    /* font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100; */
+}
+
+p {
+    font-size: 1.6em;
+}
+
+.diagonal-fractions {
+    font-variant-numeric: diagonal-fractions;
+}
+
+.lining-numbers {
+    font-variant-numeric: lining-nums;
+}
+
+.oldstyle-nums {
+    font-variant-numeric: oldstyle-nums;
+}
+
+.ordinal {
+    font-variant-numeric: ordinal;
+}
+
+.proportional-nums {
+    font-variant-numeric: proportional-nums;
+}
+
+.slashed-zero {
+    font-variant-numeric: slashed-zero;
+}
+
+.stacked-fractions {
+    font-variant-numeric: stacked-fractions;
+}
+
+.tabular-nums {
+    font-variant-numeric: tabular-nums;
+}
