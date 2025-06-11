@@ -115,12 +115,23 @@ ol li::marker {
 
 .relative {
     --bg: #f90;
-    background-color: hsl(from var(--bg) h s calc(l + 10%));
+    background-color: hsl(from var(--bg) h s calc(l + 10));
 }
 
 .relative-rgb {
     --bg: hsl(0 100% 50%);
     background-color: rgb(from var(--bg) r 100 b / 80%);
+}
+
+.relative-rgb-alpha {
+    --bg: hsl(0 100% 50% / 45%);
+    background-color: rgb(from var(--bg) r 100 b / calc(alpha + 0.5));
+}
+
+.contrast-color {
+    --bg: #f90;
+    background-color: var(--bg);
+    color: contrast-color(var(--bg));
 }
 
 .standard-fallback {
