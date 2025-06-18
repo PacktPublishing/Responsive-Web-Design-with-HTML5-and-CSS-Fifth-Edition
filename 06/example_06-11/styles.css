@@ -12,15 +12,23 @@
 /*     } */
 /* } */
 
-/* @scope (.rwd-Chapters ol) { */
-/*     code { */
-/*         background-color: #444; */
-/*         color: #eee; */
-/*         padding: 2px 4px; */
-/*         border-radius: 2px; */
-/*         font-weight: 700; */
-/*     } */
-/* } */
+/* .rwd-Chapters li p code {
+    background-color: #444;
+    color: #eee;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: 700;
+} */
+
+@scope (.rwd-Chapters li p) {
+    code {
+        background-color: #444;
+        color: #eee;
+        padding: 2px 4px;
+        border-radius: 2px;
+        font-weight: 700;
+    }
+}
 
 /* This will select any code that is in the DOM, unless it is a child of an h2 element inside an element with a class of .rwd-Chapters */
 
@@ -34,7 +42,7 @@
 /*     } */
 /* } */
 
-@scope (li p) {
+/* @scope (li p) {
     :scope code {
         background-color: #555;
         color: #efefef;
@@ -42,4 +50,4 @@
         border-radius: 0.2em;
         font-weight: 600;
     }
-}
+} */
