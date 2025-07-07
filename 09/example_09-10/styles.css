@@ -1,100 +1,122 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: #333;
+    background-color: #333;
+    padding: 3em;
 }
 
-.masks-Frame {
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
-  height: 600px;
-  animation: move 9s ease-in-out infinite alternate;
+:root {
+    --r1: #ad2486;
+    --r2: #d78437;
+    --r3: #f2bc09;
+    --r4: #aaaf44;
+    --r5: #5da183;
+    --r6: #1d96b9;
+    --r7: #1c61c2;
+    --r8: #ee692c;
 }
 
-.masks-InnerTriangle {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('1.jpg');
-  background-size: 600px auto;
-  background-repeat: no-repeat;
-  background-position: 95% center;
-  clip-path: polygon(
-    calc(100% - 320px) 60px,
-    calc(100% - 60px) calc(100% - 40px),
-    calc(100% - 580px) calc(100% - 40px)
-  );
-  animation: pulseInner 9s ease-in-out infinite alternate;
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 120deg;
+    inherits: true;
 }
 
-.masks-OuterTriangle {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(hsla(0, 0%, 0%, 0.4) 0, hsla(0, 0%, 0%, 0.4) 100%),
-    url('1.jpg');
-  background-size: 600px auto;
-  background-repeat: no-repeat;
-  background-position: 95% center;
-  clip-path: polygon(
-    calc(100% - 320px) 20px,
-    calc(100% - 20px) calc(100% - 20px),
-    calc(100% - 620px) calc(100% - 20px)
-  );
-}
-@keyframes move {
-  0% {
-    transform: translate3d(-40px, 40px, 0);
-  }
-  20% {
-    transform: translate3d(-30px, 10px, 0);
-  }
-  30% {
-    transform: translate3d(20px, 17px, 0);
-  }
-  50% {
-    transform: translate3d(-15px, 40px, 0);
-  }
-  100% {
-    transform: none;
-  }
+@keyframes borderRotate {
+    to {
+        --angle: 480deg;
+    }
 }
 
-@keyframes pulseInner {
-  0% {
-    clip-path: polygon(
-      calc(100% - 320px) 180px,
-      calc(100% - 180px) calc(100% - 120px),
-      calc(100% - 460px) calc(100% - 120px)
+.hex {
+    aspect-ratio: 0.901;
+    clip-path: shape(
+        from 53.29% 0.78%,
+        line to 96.65% 22.81%,
+        curve to 100% 27.96% with 98.71% 23.86%/100% 25.83%,
+        line to 100% 72.04%,
+        curve to 96.65% 77.19% with 100% 74.17%/98.71% 76.14%,
+        line to 53.29% 99.22%,
+        curve to 46.71% 99.22% with 51.25% 100.26%/48.75% 100.26%,
+        line to 3.35% 77.19%,
+        curve to 0% 72.04% with 1.29% 76.14%/0% 74.17%,
+        line to 0% 27.96%,
+        curve to 3.35% 22.81% with 0% 25.83%/1.29% 23.86%,
+        line to 46.71% 0.78%,
+        curve to 53.29% 0.78% with 48.75% -0.26%/51.25% -0.26%,
+        close,
+        move to 51.35% 3.87%,
+        curve to 48.65% 3.87% with 50.51% 3.45%/49.49% 3.45%,
+        line to 5.29% 25.91%,
+        curve to 3.95% 27.96% with 4.46% 26.33%/3.95% 27.12%,
+        line to 3.95% 72.04%,
+        curve to 5.29% 74.09% with 3.95% 72.88%/4.46% 73.67%,
+        line to 48.65% 96.13%,
+        curve to 51.35% 96.13% with 49.49% 96.55%/50.51% 96.55%,
+        line to 94.71% 74.09%,
+        curve to 96.05% 72.04% with 95.54% 73.67%/96.05% 72.88%,
+        line to 96.05% 27.96%,
+        curve to 94.71% 25.91% with 96.05% 27.12%/95.54% 26.33%,
+        line to 51.35% 3.87%,
+        close
     );
-  }
+    height: 200px;
+    animation: borderRotate 3s linear infinite forwards;
+    background-image: conic-gradient(
+        from var(--angle),
+        var(--r7),
+        var(--r6),
+        var(--r5),
+        var(--r4),
+        var(--r3),
+        var(--r2),
+        var(--r1),
+        var(--r8)
+    );
+}
 
-  50% {
-    clip-path: polygon(
-      calc(100% - 320px) 180px,
-      calc(100% - 180px) calc(100% - 120px),
-      calc(100% - 460px) calc(100% - 120px)
+.infinity {
+    aspect-ratio: 2.34;
+    height: 100px;
+    background-image: linear-gradient(rgb(47, 255, 0), rgb(255, 0, 187));
+    clip-path: shape(
+        from 0% 50%,
+        curve to 20.5% 100% with 0% 80.12%/8.62% 100%,
+        curve to 39.83% 77.47% with 27.72% 100%/33.16% 92.21%,
+        line to 50.02% 54.95%,
+        line to 60.17% 77.47%,
+        curve to 79.5% 100% with 66.88% 92.21%/72.3% 100%,
+        curve to 100% 50% with 91.38% 100%/100% 80.12%,
+        curve to 79.5% 0% with 100% 19.81%/91.38% 0%,
+        curve to 60.17% 22.53% with 72.3% 0%/66.88% 7.79%,
+        line to 50.02% 45.05%,
+        line to 39.83% 22.53%,
+        curve to 20.5% 0% with 33.16% 7.79%/27.72% 0%,
+        curve to 0% 50% with 8.62% 0%/0% 19.81%,
+        close,
+        move to 3.28% 50%,
+        curve to 20.5% 7.61% with 3.28% 24.54%/10.65% 7.61%,
+        curve to 37.45% 27.86% with 26.62% 7.61%/31.44% 14.79%,
+        line to 47.73% 50%,
+        line to 37.4% 72.14%,
+        curve to 20.5% 92.32% with 31.4% 85.12%/26.59% 92.32%,
+        curve to 3.28% 50% with 10.65% 92.32%/3.28% 75.46%,
+        close,
+        move to 52.27% 50%,
+        line to 62.55% 27.86%,
+        curve to 79.5% 7.61% with 68.56% 14.79%/73.38% 7.61%,
+        curve to 96.72% 50% with 89.36% 7.61%/96.72% 24.54%,
+        curve to 79.5% 92.32% with 96.72% 75.46%/89.36% 92.32%,
+        curve to 62.6% 72.14% with 73.41% 92.32%/68.61% 85.12%,
+        line to 52.27% 50%,
+        close
     );
-  }
-  100% {
-    clip-path: polygon(
-      calc(100% - 320px) 60px,
-      calc(100% - 60px) calc(100% - 40px),
-      calc(100% - 580px) calc(100% - 40px)
-    );
-  }
 }
