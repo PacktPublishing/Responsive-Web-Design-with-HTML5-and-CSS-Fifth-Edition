@@ -1,0 +1,15 @@
+:root {
+    --bg: black;
+    font-size: 1.5rem;
+}
+
+.outer {
+    background-color: var(--bg);
+    container-name: outer;
+}
+
+.inner {
+    @container outer style(--bg) {
+        color: red;
+    }
+}

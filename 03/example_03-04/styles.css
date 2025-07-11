@@ -1,0 +1,14 @@
+@container main style(background-color: #ff9900) or style(font-size: 10px) {
+    .inner-text {
+        color: #222;
+    }
+}
+
+/* Nested example */
+@container style(background-color: goldenrod) {
+    @container style(color: #333) {
+        .nested {
+            font-size: 1.5em;
+        }
+    }
+}
