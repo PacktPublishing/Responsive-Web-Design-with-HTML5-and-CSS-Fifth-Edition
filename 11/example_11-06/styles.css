@@ -1,10 +1,13 @@
-.star_Wrapper path {
-	stroke-width: 6px;
-}
-
-.has-StarBg {
-	background-image: url('Star.svg');
-	background-size: cover;
-	width: 198px;
-	height: 188px;
+.mask-bg {
+    /* background-image: url("Star.svg"); */
+    /* background-repeat: no-repeat; */
+    mask-image: url("Star.svg");
+    mask-repeat: no-repeat;
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    transition: background-color 1s;
+    &:hover {
+        background-color: hotpink;
+    }
 }
