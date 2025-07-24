@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@starting-style</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <fieldset class="controls">
+            <legend>Controls:</legend>
+            <p>Starting Position</p>
+            <div class="positions">
+                <div>
+                    <input
+                        onChange="handleRadio(this)"
+                        type="radio"
+                        id="topright"
+                        name="position"
+                        value="50vw, -50vh"
+                        checked
+                    />
+                    <label for="topright">Top Right</label>
+                </div>
+
+                <div>
+                    <input
+                        onChange="handleRadio(this)"
+                        type="radio"
+                        id="bottomright"
+                        name="position"
+                        value="50vw, 50vh"
+                    />
+                    <label for="bottomright">Bottom Right</label>
+                </div>
+
+                <div>
+                    <input
+                        onChange="handleRadio(this)"
+                        type="radio"
+                        id="bottomleft"
+                        name="position"
+                        value="-50vw, 50vh"
+                    />
+                    <label for="bottomleft">Bottom Left</label>
+                </div>
+                <div>
+                    <input
+                        onChange="handleRadio(this)"
+                        type="radio"
+                        id="topleft"
+                        name="position"
+                        value="-50vw, -50vh"
+                    />
+                    <label for="topleft">Top Left</label>
+                </div>
+            </div>
+
+            <div>
+                <label class="slider">
+                    Text Size:
+                    <input
+                        onChange="handleText(this)"
+                        type="range"
+                        min="2"
+                        max="8"
+                        step="0.2"
+                        value="4"
+                    />
+                    <span class="readout">2em</span>
+                </label>
+            </div>
+
+            <div>
+                <label class="slider">
+                    Starting Opacity
+                    <input
+                        onChange="handleOpacity(this)"
+                        type="range"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value="0"
+                    />
+                    <span class="readout">0</span>
+                </label>
+            </div>
+
+            <div>
+                <label class="slider">
+                    Transition Speed:
+                    <input
+                        onChange="handleSpeed(this)"
+                        type="range"
+                        min="0.5"
+                        max="10"
+                        step="0.1"
+                        value="2.5"
+                    />
+                    <span class="readout">1s</span>
+                </label>
+            </div>
+            <button id="quote" type="button" class="action-btn">
+                Show Quote
+            </button>
+        </fieldset>
+    </body>
+    <script src="main.js"></script>
+</html>

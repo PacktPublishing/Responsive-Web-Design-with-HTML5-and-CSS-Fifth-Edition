@@ -1,0 +1,74 @@
+:root {
+    --pos: 50vw, -50vh;
+    --size: 2em;
+    --opacity: 0;
+    --speed: 1s;
+}
+
+.controls {
+    margin: auto auto 1em;
+    width: 300px;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 20px 0;
+    font-size: 0.8em;
+    background-color: #fff;
+}
+
+.slider {
+    display: flex;
+    align-content: center;
+    gap: 0 10px;
+}
+
+.positions {
+    display: flex;
+}
+
+body {
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    position: relative;
+    align-items: start;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.box {
+    font-family: serif;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 14"><path fill="%23888" fill-opacity=".85" fill-rule="nonzero" d="M10.049 8.999c0-2.677-1.92-4.75-4.431-4.75-1.204 0-2.297.455-3.096 1.351h-.321c.533-1.787 2.24-3.353 4.47-3.969.31-.094.54-.187.686-.323a.687.687 0 0 0 .248-.554c0-.442-.348-.753-.847-.753-.375 0-.652.067-1.138.225a8.527 8.527 0 0 0-3.477 2.197C.789 3.83 0 5.703 0 7.876c0 3.764 2.372 5.947 5.223 5.947 2.757 0 4.826-2.072 4.826-4.824Zm12.07 0c0-2.677-1.93-4.75-4.431-4.75-1.207 0-2.31.455-3.096 1.351h-.325c.536-1.787 2.241-3.353 4.465-3.969.31-.094.55-.187.693-.323a.682.682 0 0 0 .241-.554c0-.442-.341-.753-.839-.753-.384 0-.651.067-1.146.225a8.598 8.598 0 0 0-3.478 2.197c-1.344 1.406-2.133 3.28-2.133 5.453 0 3.764 2.371 5.947 5.22 5.947 2.76 0 4.828-2.072 4.828-4.824Z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: calc(var(--size) / 4) auto;
+    font-style: italic;
+    position: fixed;
+    padding: calc(var(--size) / 8) calc(var(--size) / 4);
+    left: 50vw;
+    top: 50vh;
+    font-size: 2em;
+    width: max-content;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: all var(--speed);
+    @starting-style {
+        transform: translate(var(--pos));
+        font-size: var(--size);
+        opacity: var(--opacity);
+        left: auto;
+        top: auto;
+    }
+}
+
+.action-btn {
+    display: inline-flex;
+    justify-self: start;
+    background-color: #f903;
+    min-height: 45px;
+    place-items: center;
+    padding: 0 10px;
+    transition: background-color 0.2s;
+    &:active {
+        background-color: #f90;
+    }
+}
