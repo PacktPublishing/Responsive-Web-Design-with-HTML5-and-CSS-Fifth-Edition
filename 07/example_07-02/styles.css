@@ -1,44 +1,23 @@
-html,
 body {
-    padding: 0;
-    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, "Segoe UI",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.4em;
 }
 
-h1 {
-    font-size: 0.7em;
-    font-family: sans-serif;
-    margin: 0.2em 0;
-    opacity: 0.5;
-}
-
-main {
-    width: 500px;
-    margin: 0 auto;
-    background-color: #e3e3e3;
-    padding: 1em 0;
+.btn {
+    height: 45px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, "Segoe UI",
+        "Helvetica Neue", Arial, sans-serif;
+    text-box: trim-both cap alphabetic;
 }
 
 p {
-    font-size: 1.8em;
-    margin: 0 0 1em 0;
+    background-color: #efefef;
 }
 
-.wrap {
-    text-wrap: wrap;
-}
-
-.nowrap {
-    text-wrap: nowrap;
-}
-
-.balance {
-    text-wrap: balance;
-}
-
-.pretty {
-    text-wrap: pretty;
-}
-
-.stable {
-    text-wrap: stable;
+span {
+    background-color: goldenrod;
+    text-box: trim-both ex alphabetic;
+    display: inline-block;
 }

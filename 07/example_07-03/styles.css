@@ -1,35 +1,44 @@
-.paragraph-compare {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0 4em;
-    grid-template-columns: 1fr 1fr;
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 0.7em;
+    font-family: sans-serif;
+    margin: 0.2em 0;
+    opacity: 0.5;
+}
+
+main {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #e3e3e3;
+    padding: 1em 0;
 }
 
 p {
-    font-size: 1.4rem;
+    font-size: 1.8em;
+    margin: 0 0 1em 0;
 }
 
-.bree-serif-regular {
-    font-family: "Bree Serif", serif;
-    font-weight: 400;
-    font-style: normal;
+.wrap {
+    text-wrap: wrap;
 }
 
-.glyph-compare {
-    display: flex;
-    align-items: end;
+.nowrap {
+    text-wrap: nowrap;
 }
 
-.fallback {
-    font-family: "Times New Roman", Times, serif;
-    font-size-adjust: var(--adjust, 0.5);
+.balance {
+    text-wrap: balance;
 }
 
-.outline {
-    border: 1px solid orange;
-    font-size: 5em;
+.pretty {
+    text-wrap: pretty;
 }
 
-.control-section {
-    margin: 3em 0;
+.stable {
+    text-wrap: stable;
 }
