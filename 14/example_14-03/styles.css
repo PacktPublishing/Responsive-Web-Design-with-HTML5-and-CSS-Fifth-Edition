@@ -1,0 +1,68 @@
+select#lang-select,
+::picker(select) {
+    appearance: base-select;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+::picker(select) {
+    top: calc(anchor(bottom) + 1px);
+    left: calc(anchor(50%) - 140px);
+    border-radius: 15px;
+}
+
+select {
+    color: #111;
+    border: 1px solid #bbb;
+    &::picker-icon {
+        content: "↓";
+        color: #666;
+    }
+}
+
+selectedcontent {
+    color: #111;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0 5px;
+}
+
+.option-slat {
+    padding: 5px 10px;
+    background-color: #111;
+    transition: background-color 0.3s;
+    min-width: 280px;
+    min-height: 45px;
+    &:hover,
+    &:focus {
+        background-color: #333;
+        outline: 1px solid hsl(53, 100%, 50%);
+    }
+
+    & + & {
+        border-top: 1px solid #333;
+    }
+    /* This is the little mark that shows next to the chosen option */
+    &::checkmark {
+        content: "◉";
+        color: hsl(53, 100%, 50%);
+    }
+}
+
+.flag {
+    border-radius: 50%;
+    height: 20px;
+    aspect-ratio: 1;
+}
+
+.option-name {
+    color: #e4e4e4;
+    .option-slat:hover &,
+    .option-slat:focus & {
+        font-weight: 400;
+        color: #fff;
+    }
+    selectedcontent & {
+        color: #111;
+    }
+}

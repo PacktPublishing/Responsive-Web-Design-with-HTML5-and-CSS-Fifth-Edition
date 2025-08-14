@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>New select possibilities</title>
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Standard select based menu</h1>
+        <select name="lang" id="standard-select">
+            <option value="">Choose your country...</option>
+            <option value="argentina">Argentina</option>
+            <option value="brazil">Brazil</option>
+            <option value="canada">Canada</option>
+            <option value="denmark">Denmark</option>
+            <option value="equador">Equador</option>
+            <option value="germany">Germany</option>
+        </select>
+
+        <h1>Customizable select based menu</h1>
+        <label for="lang-select">Select Country:</label>
+        <select id="lang-select">
+            <button>
+                <selectedcontent></selectedcontent>
+            </button>
+
+            <option class="option-slat" value="">Select your country</option>
+            <option class="option-slat" value="argentina">
+                <img
+                    class="flag"
+                    src="./flags/Argentina.svg"
+                    alt="Flag for this option"
+                />
+                <span class="option-name">Argentina</span>
+            </option>
+            <option class="option-slat" value="brazil">
+                <img
+                    class="flag"
+                    src="./flags/Brazil.svg"
+                    alt="Flag for this option"
+                />
+                <span class="option-name">Brazil</span>
+            </option>
+            <option class="option-slat" value="canada">
+                <img
+                    class="flag"
+                    src="./flags/Canada.svg"
+                    alt="Flag for this option"
+                />
+                <span class="option-name">Canada</span>
+            </option>
+            <option class="option-slat" value="denmark">
+                <img
+                    class="flag"
+                    src="./flags/Denmark.svg"
+                    alt="Flag for this option"
+                />
+                <span class="option-name">Denmark</span>
+            </option>
+            <option class="option-slat" value="greece">
+                <img
+                    class="flag"
+                    src="./flags/Greece.svg"
+                    alt="Flag for this option"
+                />
+                <span class="option-name">Greece</span>
+            </option>
+            <option class="option-slat" value="poland">
+                <img
+                    class="flag"
+                    src="./flags/Poland.svg"
+                    alt="Flag for this option"
+                />
+                <span class="option-name">Poland</span>
+            </option>
+            <option class="option-slat" value="india">
+                <img
+                    class="flag"
+                    src="./flags/India.svg"
+                    alt="Flag for this option"
+                />
+                <span class="option-name">India</span>
+            </option>
+            <option class="option-slat" value="usa">
+                <img
+                    class="flag"
+                    src="./flags/Usa.svg"
+                    alt="Flag for this option"
+                />
+                <span class="option-name">United States of America</span>
+            </option>
+        </select>
+    </body>
+</html>

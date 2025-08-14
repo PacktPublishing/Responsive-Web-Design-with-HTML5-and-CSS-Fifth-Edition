@@ -11,7 +11,20 @@ body {
 
 fieldset {
     border-radius: 3px;
-    border: 1px solid #666;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s;
+    &:has(input:focus) {
+        box-shadow: 0 0 20px -10px #333;
+    }
+}
+
+input#yearOfCrime {
+    &:in-range {
+        background-color: rgb(from #739327 r g b / 20%);
+    }
+    &:invalid {
+        background-color: rgb(from red r g b / 10%);
+    }
 }
 
 .form-Wrapper {
@@ -53,6 +66,7 @@ fieldset + fieldset {
     color: #888;
     font-size: 15px;
     margin-bottom: 5px;
+    position: relative;
 }
 
 /*Note we are using a reverse order for flex-direction to make labels appear before the input*/
@@ -62,7 +76,7 @@ fieldset + fieldset {
         align-items: center;
     }
     .form-Input_Wrapper input:not([type="range"]):not([type="color"]) {
-        flex: 0 0 50%;
+        flex: 0 1 50%;
     }
     .form-Input_Wrapper label {
         flex: 1 0 50%;
@@ -112,23 +126,18 @@ legend span {
 input:not([type="range"]),
 textarea {
     min-height: 40px;
-    padding: 2px;
+    padding: 4px;
     font-size: 17px;
     border: 1px solid #ebebeb;
     outline: none;
-    transition:
-        transform 1s,
-        box-shadow 1s,
-        background-position 1s;
+    transition: transform 0.2s, box-shadow 0.2s, background-position 0.2s;
     background: radial-gradient(
             circle at center 400px,
             #fff 99%,
             transparent 99%
         ),
         #f1f1f1;
-    background-position:
-        -400px 90px,
-        0 0;
+    background-position: -400px 90px, 0 0;
     background-repeat: no-repeat, no-repeat;
     border-radius: 0;
     position: relative;
@@ -137,9 +146,7 @@ textarea {
 
 input:not([type="range"]):focus,
 textarea:focus {
-    background-position:
-        0 0,
-        0 0;
+    background-position: 0 0, 0 0;
 }
 
 /*This is the color of placeholder text*/
@@ -161,15 +168,15 @@ input:not([type="range"]):focus:placeholder-shown {
     background-color: #cc3232;
 }
 
-.form-About_Wrapper input:not([type="range"]) {
-    box-shadow: inset 0 -3px 0 #cc3232;
+.form-About_Wrapper input:not([type="range"]),
+.form-About_Wrapper textarea {
+    box-shadow: inset 0 -3px 0 #cc3232aa;
 }
 
-.form-About_Wrapper input:not([type="range"]):focus {
+.form-About_Wrapper input:not([type="range"]):focus,
+.form-About_Wrapper textarea:focus {
     border: 1px solid #cc3232;
-    box-shadow:
-        inset 0 -3px 0 #cc3232,
-        0 0 15px 5px #ebebeb;
+    box-shadow: inset 0 -3px 0 #cc3232, 0 0 15px 5px #ebebeb;
 }
 
 /*The What should have won section legends and inputs*/
@@ -181,15 +188,19 @@ input:not([type="range"]):focus:placeholder-shown {
     background-color: #739327;
 }
 
-.form-What_Wrapper input:not([type="range"]) {
-    box-shadow: inset 0 -3px 0 #739327;
+textarea {
+    min-height: 5em;
 }
 
-.form-What_Wrapper input:focus {
+.form-What_Wrapper input:not([type="range"]),
+.form-What_Wrapper textarea {
+    box-shadow: inset 0 -3px 0 #739327aa;
+}
+
+.form-What_Wrapper input:focus,
+.form-What_Wrapper textarea:focus {
     border: 1px solid #739327;
-    box-shadow:
-        inset 0 -3px 0 #739327,
-        0 0 15px 5px #ebebeb;
+    box-shadow: inset 0 -3px 0 #739327, 0 0 15px 5px #ebebeb;
 }
 
 /*The About you section legends and inputs*/
@@ -202,27 +213,25 @@ input:not([type="range"]):focus:placeholder-shown {
 }
 
 .form-You_Wrapper input:not([type="range"]) {
-    box-shadow: inset 0 -3px 0 #236a7e;
+    box-shadow: inset 0 -3px 0 #236a7eaa;
 }
 
 .form-You_Wrapper input:focus {
     border: 1px solid #236a7e;
-    box-shadow:
-        inset 0 -3px 0 #236a7e,
-        0 0 15px 5px #ebebeb;
+    box-shadow: inset 0 -3px 0 #236a7e, 0 0 15px 5px #ebebeb;
 }
 
 /*Make all inputs scale up when they get focus*/
 .form-Input_Wrapper input:focus {
-    transform: scale(1.06);
+    transform: scale(1.04);
 }
 
 /*Now we want some basic styling to indicate that fields are required, valid or invalid*/
 input:required + label:after {
     content: "*";
     font-size: 2.1em;
-    position: relative;
-    top: 6px;
+    position: absolute;
+    top: -8px;
     display: inline-flex;
     margin-left: 0.2ch;
     transition: color 1s;
@@ -307,6 +316,7 @@ Alternative selectors if you have :has() supported
 
 .front {
     border: 1px solid #739328;
+    color: #222;
 }
 
 .form-Submit_Btn:hover .flipper-vertical,
