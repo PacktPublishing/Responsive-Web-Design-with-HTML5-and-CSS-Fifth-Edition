@@ -24,8 +24,7 @@ explicitly, e.g.
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src:
-        url("fonts/Inter-Regular.woff2") format("woff2"),
+    src: url("fonts/Inter-Regular.woff2") format("woff2"),
         url("fonts/Inter-Regular.woff") format("woff");
 }
 
@@ -429,8 +428,6 @@ dialog::backdrop {
     align-items: center;
     min-height: 65px;
     padding: 0 15px;
-    border-radius: 33px;
-    /* border: 1px solid #089df4; */
     border-width: 3px;
     border-color: #222;
     border-style: outset;
@@ -456,7 +453,6 @@ dialog::backdrop {
     animation: borderRotate 3s linear infinite forwards;
     width: clamp(300px, 100%, 500px);
     &:hover {
-        /* background-color: #089df4; */
         filter: brightness(1.5);
     }
 }

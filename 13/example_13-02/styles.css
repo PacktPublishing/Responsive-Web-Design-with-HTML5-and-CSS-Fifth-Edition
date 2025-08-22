@@ -1,42 +1,40 @@
-html,
-body {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: #333;
+:root {
+    --r1: #ad2486;
+    --r2: #d78437;
+    --r3: #f2bc09;
+    --r4: #aaaf44;
+    --r5: #5da183;
+    --r6: #1d96b9;
+    --r7: #1c61c2;
+    --r8: #ee692c;
 }
 
-.court {
-    width: 400px;
-    height: 200px;
-    background-color: rgb(197, 150, 86);
-    position: relative;
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 120deg;
+    inherits: true;
 }
 
-.ball {
-    --ballSize: 18px;
-    --ball-border: #fff;
-    --ball-color: #df4a23;
-    position: absolute;
-    left: calc(var(--x) - var(--ballSize));
-    top: calc(var(--y) - var(--ballSize));
-    width: var(--ballSize);
-    height: var(--ballSize);
-    background-color: var(--ball-color);
-    border-radius: 50%;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid var(--ball-border);
-    animation: 0.5s ease infinite alternate forwards bounce;
-}
-
-@keyframes bounce {
-    0% {
-        transform: scale(1);
-    }
+@keyframes rotateAngle {
     100% {
-        transform: scale(1.3);
+        --angle: 480deg;
     }
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    --angle: 120deg;
+    background-image: conic-gradient(
+        from var(--angle),
+        var(--r7),
+        var(--r6),
+        var(--r5),
+        var(--r4),
+        var(--r3),
+        var(--r2),
+        var(--r1),
+        var(--r8)
+    );
+    animation: rotateAngle 3s linear infinite forwards;
 }

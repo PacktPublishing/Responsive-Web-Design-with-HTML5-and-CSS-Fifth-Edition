@@ -1,0 +1,29 @@
+.box {
+    display: none;
+    opacity: 0;
+    height: 200px;
+    aspect-ratio: 1;
+    background-color: red;
+    transition: all 3s;
+    color: white;
+    font-family: sans-serif;
+}
+
+.without {
+    &.show {
+        display: inline-block;
+        opacity: 1;
+    }
+}
+
+.with {
+    transition-behavior: allow-discrete;
+    /* 	Note if you don't include starting-style nested inside the most specific related selector, it will be overridden due to low specificity */
+    &.show {
+        display: inline-block;
+        opacity: 1;
+        @starting-style {
+            opacity: 0;
+        }
+    }
+}
