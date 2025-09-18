@@ -1,0 +1,34 @@
+body {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 15px 0;
+    justify-items: center;
+    background-color: #eee;
+}
+
+.panel {
+    height: 300px;
+    width: min(100%, 800px);
+    border-radius: 5px;
+    background-image: linear-gradient(
+        to bottom right,
+        lch(79.11% 83.02 79.91),
+        lch(36.72% 39.92 82.55)
+    );
+    animation: enter linear both;
+    animation-range: 0% 300px;
+    animation-timeline: view();
+    position: relative;
+    transform-origin: top center;
+}
+
+@keyframes enter {
+    0% {
+        transform: perspective(200px) rotateX(-90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}

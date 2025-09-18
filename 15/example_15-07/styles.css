@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sea {
+    width: 800px;
+    height: 400px;
+    position: relative;
+    opacity: 0.8;
+    background-image: url("./assets/sea.jpg");
+}
+
+.anchor {
+    background-image: url("./assets/anchor.png");
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+    top: 80px;
+    left: 80px;
+    position: absolute;
+    anchor-name: --boat-anchor;
+    border: 1px dotted black;
+}
+
+@position-try --rule-one {
+    position-area: right;
+    width: 500px;
+    top: 50%;
+}
+
+@position-try --rule-two {
+    position-area: bottom right;
+    width: 400px;
+    top: 20px;
+}
+
+.text {
+    font-size: 1.2rem;
+    background-color: rgb(from white r g b / 30%);
+    backdrop-filter: blur(3px);
+    border: 1px dashed orange;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    position-anchor: --boat-anchor;
+    position: absolute;
+    position-area: left center;
+    left: 10px;
+    width: calc(anchor-size(width) * 3);
+    height: anchor-size(height);
+    position-try: --rule-one, --rule-two;
+}

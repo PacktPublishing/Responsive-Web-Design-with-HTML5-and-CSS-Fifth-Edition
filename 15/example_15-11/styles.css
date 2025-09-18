@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    position: fixed;
+    background-color: green;
+    inset: 0;
+}
+
+.deal {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 30px;
+}
+
+.card {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(black 3px, transparent 4px),
+        radial-gradient(black 3px, transparent 4px),
+        linear-gradient(#fff 4px, transparent 0),
+        linear-gradient(
+            45deg,
+            transparent 74px,
+            transparent 75px,
+            #a4a4a4 75px,
+            #a4a4a4 76px,
+            transparent 77px,
+            transparent 109px
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 75px,
+            transparent 76px,
+            #a4a4a4 76px,
+            #a4a4a4 77px,
+            transparent 78px,
+            transparent 109px
+        ),
+        #fff;
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px,
+        109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+    position: absolute;
+    height: 200px;
+    width: 136px;
+    border: 2px solid #ddd;
+    filter: drop-shadow(1px 1px 1px #000);
+    transform-origin: center;
+    /* This is easier than setting in JavaScript but does not work in Safari as of late 2025 */
+    /* view-transition-name: match-element; */
+    view-transition-class: card;
+    &:nth-last-child(1) {
+        transform: translateX(-50%) rotate(2deg);
+    }
+    &:nth-last-child(2) {
+        transform: translateX(-50%) rotate(4deg);
+    }
+    &.dealt {
+        bottom: auto;
+        top: 10px;
+    }
+    &.dealt:nth-child(1n) {
+        left: 10px;
+        transform: rotate(178deg);
+    }
+    &.dealt:nth-child(2n) {
+        left: 25vw;
+        transform: rotate(178deg);
+    }
+    &.dealt:nth-child(3n) {
+        left: 50vw;
+        transform: rotate(183deg);
+    }
+    &.dealt:nth-child(4n) {
+        left: 75vw;
+        transform: rotate(181deg);
+    }
+}
+
+::view-transition-group(.card) {
+    animation-duration: 1s;
+}

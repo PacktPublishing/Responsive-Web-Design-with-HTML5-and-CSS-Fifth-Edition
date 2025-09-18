@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sea {
+    width: 800px;
+    height: 400px;
+    position: relative;
+    opacity: 0.8;
+    background-image: url("./assets/sea.jpg");
+}
+
+.anchor {
+    background-image: url("./assets/anchor.png");
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    position: absolute;
+    anchor-name: --boat-anchor;
+}
+
+.boat {
+    background-image: url("./assets/boat.png");
+    background-size: contain;
+    aspect-ratio: 800 / 377;
+    height: 80px;
+    position-anchor: --boat-anchor;
+    position: absolute;
+    position-area: bottom right;
+}

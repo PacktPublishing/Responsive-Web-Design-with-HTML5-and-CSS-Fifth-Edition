@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sea {
+    width: 800px;
+    height: 400px;
+    position: relative;
+    opacity: 0.8;
+    background-image: url("./assets/sea.jpg");
+}
+
+.anchor {
+    background-image: url("./assets/anchor.png");
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    position: absolute;
+    anchor-name: --boat-anchor;
+    border: 1px dotted black;
+}
+
+.text {
+    padding: 0.5em;
+    font-size: 1.2rem;
+    background-color: rgb(from white r g b / 30%);
+    backdrop-filter: blur(3px);
+    border: 1px dashed orange;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    position-anchor: --boat-anchor;
+    position: absolute;
+    inset: calc(anchor(bottom) + 30px) calc(anchor(right) - 90px) auto
+        calc(anchor(left) - 90px);
+}

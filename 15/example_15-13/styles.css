@@ -1,0 +1,86 @@
+::view-transition-group(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+    animation-duration: 3.25s !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #eee;
+}
+
+h2,
+p {
+    margin: 0;
+}
+
+a {
+    color: currentColor;
+}
+
+.main-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.section {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background-color: #fcfcfc;
+    border-radius: 5px;
+    display: grid;
+    align-content: start;
+    gap: 5px;
+    grid-auto-flow: row;
+    align-self: start;
+    filter: drop-shadow(0 0 4px #ddd);
+    view-transition-name: var(--viewTransitionName);
+    position: relative;
+    z-index: 2;
+    &:hover {
+        cursor: pointer;
+    }
+    &.active {
+        position: absolute;
+        min-height: 350px;
+        width: 50vw;
+        z-index: 10;
+        inset: auto 25vw;
+        margin: auto;
+    }
+}
+
+.notes {
+    line-height: 1.4;
+    margin-top: 1rem;
+    display: none;
+    .active & {
+        display: block;
+    }
+}
+
+.key {
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+
+.value {
+    font-weight: 700;
+}
+
+:where(.name, .notes, .connectivity, .switches, .keys, .image, .manufacturer) {
+    view-transition-name: var(--viewTransitionName);
+    width: fit-content;
+}
+
+.image {
+    height: 150px;
+    width: 200px;
+    margin: 0 auto;
+    object-fit: contain;
+}
