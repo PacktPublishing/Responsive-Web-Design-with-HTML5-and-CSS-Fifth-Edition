@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+figure,
+blockquote,
+p {
+    margin: 0;
+}
+
+body {
+    background-color: #031016;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    background-image: url("./assets/churchill.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.author {
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
+}
+
+@keyframes rotateAngle {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+
+.gradient-border-mask {
+    p {
+        font-size: 3em;
+        text-shadow: 1px 1px 2px black;
+    }
+    display: block;
+    position: relative;
+    padding: 20px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+}
+
+.gradient-border-mask::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    background: conic-gradient(
+            from var(--angle),
+            #c8102e,
+            white,
+            #012169,
+            white,
+            #c8102e
+        )
+        border-box;
+    animation: rotateAngle 5s forwards linear infinite;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}

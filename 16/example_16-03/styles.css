@@ -20,13 +20,14 @@ a {
     grid-template-rows: auto auto;
     grid-auto-columns: auto;
     grid-auto-flow: column;
-    /* standards way, currently only implemented by Firefox */
-    scrollbar-color: #b5b5b5 #616161;
-    scrollbar-width: thin;
+    /* standards way */
+    /* scrollbar-color: #b5b5b5 #616161;
+    scrollbar-width: thin; */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
 
+/* Older webkit specific versions that work on older Chromium and WebKit browsers */
 .Scroll_Wrapper::-webkit-scrollbar {
     width: 25px;
     background-color: #616161;
