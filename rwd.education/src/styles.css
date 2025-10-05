@@ -425,35 +425,41 @@ dialog::backdrop {
 
 .rwd-Hero_JumpLink {
     display: flex;
-    align-items: center;
-    min-height: 65px;
-    padding: 0 15px;
-    border-width: 3px;
-    border-color: #222;
-    border-style: outset;
-    --angle: 120deg;
-    border-image: conic-gradient(
-        from var(--angle),
-        var(--r7),
-        var(--r6),
-        var(--r5),
-        var(--r4),
-        var(--r3),
-        var(--r2),
-        var(--r1),
-        var(--r8)
-    );
-    border-image-slice: 1;
-    border-image-repeat: stretch;
     font-size: 0.95rem;
     font-weight: 600;
     color: #fff;
     justify-content: center;
-    transition: filter 0.3s;
-    animation: borderRotate 3s linear infinite forwards;
+    display: block;
+    position: relative;
+    padding: 20px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
     width: clamp(300px, 100%, 500px);
+    text-align: center;
     &:hover {
         filter: brightness(1.5);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 30px;
+        border: 3px solid transparent;
+        background: conic-gradient(
+                from var(--angle),
+                var(--r7),
+                var(--r6),
+                var(--r5),
+                var(--r4),
+                var(--r3),
+                var(--r2),
+                var(--r1),
+                var(--r8)
+            )
+            border-box;
+        animation: borderRotate 5s forwards linear infinite;
+        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
     }
 }
 
