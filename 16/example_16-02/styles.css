@@ -2,7 +2,7 @@
     width: 250px;
     text-overflow: ellipsis;
     overflow: hidden;
-    -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     display: -webkit-box;
 }
