@@ -428,12 +428,10 @@ dialog::backdrop {
     font-size: 0.95rem;
     font-weight: 600;
     color: #fff;
-    justify-content: center;
     display: block;
     position: relative;
     padding: 20px;
     max-width: 600px;
-    backdrop-filter: blur(10px);
     width: clamp(300px, 100%, 500px);
     text-align: center;
     &:hover {

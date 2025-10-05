@@ -6,7 +6,7 @@ For more about this title, visit [rwd.education](https://rwd.education)
 
 Queries? Create an issue, contact the author on [Twitter](https://twitter.com/benfrain) or via his [website](https://benfrain.com)
 
-<a href="https://rwd.education"><img src="https://benfrain.com/wp-content/themes/bf2018/img/rwd4.jpg" style="max-width: 600px;" alt="Responsive Web Design with HTML5 and CSS, Fourth Edition"/></a>
+<a href="https://rwd.education"><img src="https://github.com/PacktPublishing/Responsive-Web-Design-with-HTML5-and-CSS-Fifth-Edition/blob/main/rwd.education/src/img/RWDv5_Master.png" style="max-width: 600px;" alt="Responsive Web Design with HTML5 and CSS, Fifth Edition"/></a>
 
 ## Building the 'rwd.education' site
 
