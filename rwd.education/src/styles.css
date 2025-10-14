@@ -39,13 +39,13 @@ explicitly, e.g.
  *
  * */
 :root {
-    --grad: linear-gradient(63deg, #262626 23%, transparent 23%) 7px 0,
-        linear-gradient(63deg, transparent 73%, #262626 76%),
+    --grad: linear-gradient(63deg, #000147 23%, transparent 23%) 7px 0,
+        linear-gradient(63deg, transparent 73%, #000147 76%),
         linear-gradient(
             63deg,
             transparent 34%,
-            #262626 38%,
-            #262626 58%,
+            #000147 38%,
+            #000147 58%,
             transparent 62%
         ),
         #222;
@@ -68,7 +68,7 @@ explicitly, e.g.
     :root {
         --hl1: color(display-p3 1 0 0.218);
         --hl2: color(display-p3 0 0.487 1);
-        --r1: color(display-p3 0.685 0.008 0.805);
+        --r1: oklch(0.7 0.28 355.73);
         --r2: color(display-p3 1 0.684 0);
         --r3: color(display-p3 1 0.902 0);
         --r4: color(display-p3 0.639 0.87 0.03);
@@ -354,7 +354,7 @@ dialog::backdrop {
 .rwd-Hero_Cover {
     width: 150px;
     display: block;
-    box-shadow: 0 8px 20px -5px #000;
+    box-shadow: 0 2px 52px -20px #ffffff;
     margin: 20px auto;
     @media (min-width: 800px) {
         position: absolute;
@@ -545,7 +545,7 @@ dialog::backdrop {
         background: var(--grad);
         background-size: 16px 48px;
         clip-path: polygon(0 6%, 100% 0%, 100% 100%, 0 94%);
-        background-color: #262c28;
+        background-color: #000159;
     }
 }
 
@@ -768,7 +768,7 @@ dialog::backdrop {
 
 .rwd-Reviews {
     padding: 3rem 1rem;
-    background-color: #222;
+    background-color: #000159;
     clip-path: polygon(0 0%, 100% 6%, 100% 94%, 0 100%);
     @media (min-width: 1000px) {
         display: grid;
@@ -778,6 +778,7 @@ dialog::backdrop {
             );
         grid-template-rows: 50px auto 50px;
         background: var(--grad);
+        background-color: #000159;
         background-size: 16px 48px;
     }
 }
@@ -1054,7 +1055,7 @@ blockquote {
     padding: 20px;
     background: var(--grad);
     background-size: 16px 48px;
-
+    background-color: #000159;
     @media (min-width: 1000px) {
         display: grid;
         padding: 3rem 0;
@@ -1276,6 +1277,7 @@ blockquote {
     flex-direction: column;
     padding: 0 20px 30px;
     background: var(--grad);
+    background-color: #000159;
     background-size: 16px 48px;
     @media (min-width: 1000px) {
         display: grid;
