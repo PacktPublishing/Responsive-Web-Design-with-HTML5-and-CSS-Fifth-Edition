@@ -392,7 +392,7 @@ dialog::backdrop {
     color: #dddddd;
     line-height: 1.8;
     margin-top: 20px;
-    padding-top: 25px;
+    padding-block: 25px;
     border-top: 1px solid #424242;
     & a {
         color: #fff;
@@ -433,6 +433,7 @@ dialog::backdrop {
     padding: 20px;
     max-width: 600px;
     width: clamp(300px, 100%, 500px);
+    margin: 0 auto;
     text-align: center;
     &:hover {
         filter: brightness(1.5);
