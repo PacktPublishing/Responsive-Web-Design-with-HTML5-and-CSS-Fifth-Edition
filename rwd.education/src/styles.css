@@ -203,10 +203,10 @@ body {
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s;
-    @nest .rwd-Logo:hover & {
+    .rwd-Logo:hover & {
         transform: scaleX(1.2);
     }
-    @nest &::before {
+    &::before {
         content: "";
         width: 0;
         height: 0;
@@ -229,10 +229,10 @@ body {
     transition: transform 0.3s;
     display: flex;
     align-items: center;
-    @nest .rwd-Logo:hover & {
+    .rwd-Logo:hover & {
         transform: scaleX(1.2);
     }
-    @nest &::before {
+    &::before {
         content: "";
         display: none;
         width: 0;
@@ -354,13 +354,13 @@ dialog::backdrop {
 .rwd-Hero_Cover {
     width: 150px;
     display: block;
-    box-shadow: 0 2px 52px -20px #ffffff;
     margin: 20px auto;
     @media (min-width: 800px) {
+        filter: drop-shadow(1px 4px 51px hotpink);
         position: absolute;
         width: calc(50vw - 150px);
         left: calc(50% + 10vw);
-        bottom: -20px;
+        bottom: 0;
         max-width: 350px;
     }
 }
@@ -731,7 +731,7 @@ dialog::backdrop {
         min-height: 65px;
         grid-column: 2 / span 2;
         margin: 0 30px;
-        @nest &:nth-child(2) {
+        &:nth-child(2) {
             grid-column: 4 / span 2;
         }
     }
@@ -885,11 +885,10 @@ blockquote {
     width: 39px;
     fill: #fff;
     transition: transform 0.3s;
-    @nest .rwd-Review_QuoteActionBtn:hover:not([disabled]) & {
+    .rwd-Review_QuoteActionBtn:hover:not([disabled]) & {
         transform: translateX(-10px);
     }
-    @nest .rwd-Review_QuoteActionBtn:nth-last-of-type(1):hover:not([disabled])
-            & {
+    .rwd-Review_QuoteActionBtn:nth-last-of-type(1):hover:not([disabled]) & {
         transform: translateX(10px);
     }
 }
@@ -1041,10 +1040,10 @@ blockquote {
     width: 39px;
     fill: #333;
     transition: transform 0.3s;
-    @nest .rwd-New_ActionBtn:hover:not([disabled]) & {
+    .rwd-New_ActionBtn:hover:not([disabled]) & {
         transform: translateX(-10px);
     }
-    @nest .rwd-New_ActionBtn:nth-last-of-type(1):hover:not([disabled]) & {
+    .rwd-New_ActionBtn:nth-last-of-type(1):hover:not([disabled]) & {
         transform: translateX(10px);
     }
 }
