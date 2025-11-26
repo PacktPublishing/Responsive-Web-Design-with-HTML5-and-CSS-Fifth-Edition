@@ -1,7 +1,7 @@
 ::view-transition-group(*),
 ::view-transition-old(*),
 ::view-transition-new(*) {
-    animation-duration: 3.25s !important;
+    animation-duration: 0.5s !important;
 }
 
 * {
