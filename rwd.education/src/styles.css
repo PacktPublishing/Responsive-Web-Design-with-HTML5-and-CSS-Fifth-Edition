@@ -869,10 +869,13 @@ blockquote {
     align-items: center;
     font-size: 0.8rem;
     color: #fff;
-    -webkit-appearance: none;
+    appearance: none;
     background-color: transparent;
     border: 0;
-    transition: opacity 0.4s;
+    transition: all 0.4s;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 [disabled].rwd-Review_QuoteActionBtn {
@@ -1024,10 +1027,13 @@ blockquote {
     align-items: center;
     font-size: 0.8rem;
     color: #333;
-    -webkit-appearance: none;
+    appearance: none;
     background-color: transparent;
     border: 0;
-    transition: opacity 0.4s;
+    transition: all 0.4s;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 [disabled].rwd-New_ActionBtn {
